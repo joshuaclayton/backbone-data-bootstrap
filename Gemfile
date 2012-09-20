@@ -18,4 +18,5 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'guard-spork'
 end
