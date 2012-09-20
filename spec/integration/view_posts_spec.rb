@@ -17,6 +17,7 @@ feature 'Viewing posts', js: true do
     posts.each do |post|
       within "article##{dom_id(post)}" do
         expect(page).to have_css 'h2', text: post.title
+        expect(page).to have_css '.author', text: post.user.name
         expect(page).to have_css 'div', text: post.body
       end
     end

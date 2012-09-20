@@ -7,3 +7,6 @@ class @App.Models.Post extends Backbone.Model
 
   domId: ->
     @get('dom_id')
+
+  authorName: ->
+    @get('author_name')

@@ -21,6 +21,17 @@ body {
     }
   }
 
+  .author {
+    color: #888;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: .5em;
+
+    &:before {
+      content: 'by: ';
+    }
+  }
+
   .posts .message {
     text-align: center;
     font-weight: 500;

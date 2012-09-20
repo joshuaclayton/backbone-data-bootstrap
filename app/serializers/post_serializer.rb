@@ -1,5 +1,9 @@
 class PostSerializer < ActiveModel::Serializer
-  attributes :title, :body, :dom_id
+  attributes :title, :body, :dom_id, :author_name
+
+  def author_name
+    object.user.name
+  end
 
   def dom_id
     record_identifier.dom_id(object)
