@@ -8,7 +8,7 @@ namespace :db do
     end
 
     20.times do
-      create :post, user: users.sample, title: Faker::Lorem.sentence, body: Faker::Lorem.paragraphs
+      create :post, user: users.sample, title: Faker::Lorem.sentence, body: Faker::Lorem.paragraphs.join("\n")
     end
   end
 end

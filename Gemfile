@@ -2,8 +2,11 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 gem 'jquery-rails'
+gem 'ejs'
 
 gem 'high_voltage'
+gem 'backbone-support'
+gem 'active_model_serializers'
 
 gem 'sqlite3'
 
@@ -24,4 +27,5 @@ group :test do
   gem 'capybara'
   gem 'guard-spork'
   gem 'shoulda-matchers'
+  gem 'capybara-webkit'
 end

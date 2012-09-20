@@ -1,0 +1,18 @@
+<div class='posts'></div>
+
+<% content_for :javascript do %>
+  <script type='text/json' id='bootstrap'>
+    {
+      "posts": <%== ActiveModel::ArraySerializer.new(@posts).to_json %>
+    }
+  </script>
+
+  <%= javascript_tag do %>
+    $(function() {
+      var postsData = App.bootstrap('posts'),
+          postsCollection = new App.Collections.Posts(postsData);
+
+      new App.Views.PostsShow({ posts: postsCollection, el: $('.posts') }).render();
+    });
+  <% end %>
+<% end %>
