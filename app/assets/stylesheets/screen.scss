@@ -1,0 +1,30 @@
+@import 'compass';
+
+@include global-reset;
+@include reset-html5;
+
+body {
+  font-family: 'Helvetica Neue';
+  font-size: 18px;
+  line-height: 1.3em;
+
+  h1, h2, h3 { line-height: 1.4em; font-weight: 600; }
+  h1 { font-size: 60px; }
+  h2 { font-size: 40px; background: yellow; margin-bottom: .25em; }
+
+  .container {
+    width: 900px;
+    margin: 1em auto;
+
+    article {
+      margin-bottom: 3em;
+    }
+  }
+
+  .posts .message {
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+    margin-top: 70px;
+  }
+}

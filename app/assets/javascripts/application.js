@@ -15,7 +15,7 @@
 //= require underscore
 //= require backbone
 //= require backbone-support
-//= require base
+//= require app
 //= require_tree ../templates
 //= require_tree ./utils
 //= require_tree ./models

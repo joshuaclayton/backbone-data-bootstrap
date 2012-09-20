@@ -1,4 +1,6 @@
-<div class='posts'></div>
+<div class='posts'>
+  <p class='message'>Loading...</p>
+</div>
 
 <% content_for :javascript do %>
   <script type='text/json' id='bootstrap'>
@@ -10,7 +12,9 @@
       var postsData = App.bootstrap('posts'),
           postsCollection = new App.Collections.Posts(postsData);
 
-      new App.Views.PostsShow({ posts: postsCollection, el: $('.posts') }).render();
+      setTimeout(function() {
+        new App.Views.PostsShow({ posts: postsCollection, el: $('.posts') }).render();
+      }, App.postWaitTime);
     });
   <% end %>
 <% end %>

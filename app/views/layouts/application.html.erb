@@ -7,7 +7,16 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= yield %>
+    <div class='container'>
+      <%= yield %>
+    </div>
     <%= yield :javascript %>
+    <%= javascript_tag do %>
+      $(function() {
+        if(window.App.debug) {
+          $('body').addClass('debug');
+        }
+      });
+    <% end %>
   </body>
 </html>

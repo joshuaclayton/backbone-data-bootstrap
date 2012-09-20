@@ -7,6 +7,7 @@ gem 'ejs'
 gem 'high_voltage'
 gem 'backbone-support'
 gem 'active_model_serializers'
+gem 'compass-rails'
 
 gem 'sqlite3'
 
