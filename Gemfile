@@ -9,7 +9,7 @@ gem 'backbone-support'
 gem 'active_model_serializers'
 gem 'compass-rails'
 
-gem 'sqlite3'
+gem 'pg'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
