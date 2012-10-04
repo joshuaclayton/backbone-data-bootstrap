@@ -10,6 +10,7 @@ gem 'active_model_serializers'
 gem 'compass-rails'
 
 gem 'pg'
+gem 'factory_girl_rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -20,7 +21,6 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
   gem 'faker'
   gem 'jasminerice'
   gem 'guard-jasmine'
