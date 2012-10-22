@@ -9,6 +9,10 @@
 
   <%= javascript_tag do %>
     $(function() {
+      <% if ENV['POST_WAIT_TIME'].present? %>
+        App.postWaitTime = <%= ENV['POST_WAIT_TIME'].to_i %>;
+      <% end %>
+
       var postsData = App.bootstrap('posts'),
           postsCollection = new App.Collections.Posts(postsData);
 
