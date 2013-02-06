@@ -27,7 +27,7 @@ group :test, :development do
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '~> 2.0'
   gem 'guard-spork'
   gem 'shoulda-matchers'
   gem 'capybara-webkit'
