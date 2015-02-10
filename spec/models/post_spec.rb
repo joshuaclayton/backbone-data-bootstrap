@@ -1,5 +1,5 @@
-require 'spec_helper'
+require "spec_helper"
 
-describe Post do
+RSpec.describe Post do
   it { should belong_to :user }
 end

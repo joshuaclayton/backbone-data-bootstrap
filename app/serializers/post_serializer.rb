@@ -13,7 +13,7 @@ class PostSerializer < ActiveModel::Serializer
 
   def record_identifier
     @record_identifier ||= Class.new do
-      include ActionController::RecordIdentifier
+      include ActionView::RecordIdentifier
     end.new
   end
 end

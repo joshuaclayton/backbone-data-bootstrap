@@ -1,7 +1,7 @@
-require 'spec_helper'
+require "rails_helper"
 
-feature 'Viewing the homepage' do
-  scenario 'displays a welcome message' do
+RSpec.feature "Viewing the homepage" do
+  scenario "displays a welcome message" do
     view_the_homepage
     user_sees_welcome_message
   end
@@ -11,6 +11,6 @@ feature 'Viewing the homepage' do
   end
 
   def user_sees_welcome_message
-    expect(page).to have_css 'h1[data-role=welcome-message]'
+    expect(page).to have_css "h1[data-role=welcome-message]"
   end
 end

@@ -1,7 +1,7 @@
-require 'spec_helper'
+require 'rails_helper'
 
-feature 'Viewing posts', js: true do
-  include ActionController::RecordIdentifier
+RSpec.feature 'Viewing posts', js: true do
+  include ActionView::RecordIdentifier
 
   scenario 'displays post information' do
     posts = create_list :post, 3

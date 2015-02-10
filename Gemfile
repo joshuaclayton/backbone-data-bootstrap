@@ -1,34 +1,29 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'rails', '3.2.11'
-gem 'jquery-rails'
-gem 'ejs'
+ruby "2.2.0"
 
-gem 'high_voltage'
-gem 'backbone-support'
-gem 'active_model_serializers'
-gem 'compass-rails'
+gem "rails", "4.2.0"
+gem "jquery-rails"
+gem "ejs"
+gem "sass-rails"
+gem "coffee-rails"
 
-gem 'pg'
-gem 'factory_girl_rails'
-gem 'faker'
+gem "high_voltage"
+gem "backbone-support"
+gem "active_model_serializers"
+gem "compass-rails"
 
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  gem 'uglifier', '>= 1.0.3'
-end
+gem "pg"
+gem "factory_girl_rails"
+gem "faker"
 
 group :test, :development do
-  gem 'rspec-rails'
-  gem 'jasminerice'
-  gem 'guard-jasmine'
+  gem "konacha"
+  gem "rspec-rails"
 end
 
 group :test do
-  gem 'capybara', '~> 2.0'
-  gem 'guard-spork'
-  gem 'shoulda-matchers'
-  gem 'capybara-webkit'
+  gem "capybara", "~> 2.0"
+  gem "shoulda-matchers"
+  gem "capybara-webkit"
 end

@@ -1,26 +1,16 @@
-require 'rubygems'
-require 'spork'
-#uncomment the following line to use spork with the debugger
-#require 'spork/ext/ruby-debug'
-
-Spork.prefork do
-  # This file is copied to spec/ when you run 'rails generate rspec:install'
-  ENV["RAILS_ENV"] ||= 'test'
-  require File.expand_path("../../config/environment", __FILE__)
-  require 'rspec/rails'
-  require 'rspec/autorun'
-
-  require 'capybara/rspec'
-
-  Capybara.javascript_driver = :webkit
-
-  RSpec.configure do |config|
-    config.infer_base_class_for_anonymous_controllers = false
-    config.order = "random"
-    config.include FactoryGirl::Syntax::Methods
+RSpec.configure do |config|
+  config.expect_with :rspec do |expectations|
+    expectations.syntax = :expect
   end
-end
 
-Spork.each_run do
-  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+  config.mock_with :rspec do |mocks|
+    mocks.syntax = :expect
+    mocks.verify_partial_doubles = true
+  end
+
+  config.order = :random
+
+  config.disable_monkey_patching!
+
+  Kernel.srand config.seed
 end
