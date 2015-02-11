@@ -24,6 +24,7 @@ end
 
 group :test do
   gem "capybara", "~> 2.0"
+  gem "headless"
   gem "shoulda-matchers"
   gem "capybara-webkit"
 end

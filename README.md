@@ -18,19 +18,21 @@ later.
 
 ## Set up the app
 
-    $ bundle && bundle --binstubs
+    $ bin/setup
+
+## Set up your Docker environment
 
 ## Start the app
 
-    $ rails s
+    $ fig up web
 
 ## Bootstrap Data
 
-    $ rake db:bootstrap
+    $ fig run web rake db:bootstrap
 
 ## Run Tests
 
-    $ rake
+    $ fig run web rake
 
 ## License
 

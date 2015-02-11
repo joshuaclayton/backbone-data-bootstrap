@@ -1,13 +1,12 @@
-development:
+development: &default
   adapter: postgresql
   database: backbone_data_bootstrap_development
   min_messages: WARNING
-  host: localhost
   pool: 5
+  username: postgres
+  host: <%= ENV['BACKBONEDATABOOTSTRAP_DB_1_PORT_5432_TCP_ADDR'] %>
+  port: <%= ENV['BACKBONEDATABOOTSTRAP_DB_1_PORT_5432_TCP_PORT'] %>
 
 test:
-  adapter: postgresql
+  <<: *default
   database: backbone_data_bootstrap_test
-  min_messages: WARNING
-  host: localhost
-  pool: 5

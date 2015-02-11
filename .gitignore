@@ -13,5 +13,4 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/bin
 /public/assets

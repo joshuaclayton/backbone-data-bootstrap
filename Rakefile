@@ -6,4 +6,14 @@ require File.expand_path('../config/application', __FILE__)
 
 BackboneDataBootstrap::Application.load_tasks
 
-task default: ["konacha:run", :spec]
+namespace :konacha do
+  task :run_with_headless do
+    require "headless"
+
+    Headless.ly do
+      Rake::Task["konacha:run"].invoke
+    end
+  end
+end
+
+task default: ["konacha:run_with_headless", :spec]
