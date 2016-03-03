@@ -4,8 +4,7 @@ development: &default
   min_messages: WARNING
   pool: 5
   username: postgres
-  host: <%= ENV['BACKBONEDATABOOTSTRAP_DB_1_PORT_5432_TCP_ADDR'] %>
-  port: <%= ENV['BACKBONEDATABOOTSTRAP_DB_1_PORT_5432_TCP_PORT'] %>
+  host: db
 
 test:
   <<: *default

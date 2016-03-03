@@ -24,15 +24,15 @@ later.
 
 ## Start the app
 
-    $ fig up web
+    $ docker-compose up web
 
 ## Bootstrap Data
 
-    $ fig run web rake db:bootstrap
+    $ docker-compose run web rake db:bootstrap
 
 ## Run Tests
 
-    $ fig run web rake
+    $ docker-compose run web rake
 
 ## License
 
